@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Concurso Quiz Mapfre</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript;"/>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="apple-mobile-web-app-capable" content="yes">	
+		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
+				
+	</head>
+
+	<body>
+		<header>
+			<img src="./media/imagenes/FMNavbar.png" alt="Logo Mapfre blanco">
+		</header>
+		<main class="center" id="main">
+			<div class="home">
+				<img src="./media/imagenes/FMRQuestions.png" alt="Logo Mapfre rojo">
+				<h2>QUÍEN QUIERE ESTAR ASEGURADO</h2>
+				<div class="homeButton">
+					<button id="startGame">Jugar</button>
+					<button id="instructions">Instrucciones</button>
+				</div>
+				<button id="leaderboard" class="leaderboard">Tabla de puntuaciones</button>
+			</div>
+		</main>
+		<footer>
+			<p><strong>MAPFRE</strong> © 2022 Todos los derechos reservados</p>
+		</footer>
+	</body>
+	
+</html>
+
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/lib/json2xml.js"></script>
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/lib/xml2json.js"></script>
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/lib/moment.min.js"></script>
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/config.js"></script>
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/cextapi.js"></script>
+<script charset="UTF-8" language="javascript" type="text/javascript" src="scripts/core.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+	CEXT.onInit=function()
+	{
+		// Realizar las llamadas de inicialización del juego
+	}
+	
+</script>

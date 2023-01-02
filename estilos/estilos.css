@@ -1,0 +1,536 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+/* CSS Document */
+
+:root {
+    --primaryColor: #fc1b13;
+    --secondaryColor: #151414;
+    --baseColor: #f0efeb;
+    --hoverColor: #7b2cbf;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 500ms ease, box-shadow 300ms linear; /* No se si es lo mas eficiente MIRAR */
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../media/imagenes/bg.jpg");
+    background-size: cover;
+}
+
+.disableHover{
+    pointer-events: none;
+}
+
+button{
+    background: var(--primaryColor);
+    color: var(--baseColor);
+    border: 2px solid var(--secondaryColor);
+    border-radius: .5rem;
+    padding: .5rem 0;
+    width: 15rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: transparent;
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+main{
+    height: 100%;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 126.28px;
+}
+
+.home img {
+    width: 25rem;
+    height: auto;
+}
+
+.home h2 {
+    color:  var(--primaryColor);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.homeButton button:first-child {
+    margin-right: 1.5rem;
+}
+
+.leaderboard{
+    margin-top: 1rem;
+}
+
+header{
+    padding: 0.323rem 0;
+    background-color:  var(--primaryColor);
+}
+
+header img {
+    height: 5rem;
+    width: auto;
+}
+
+.game{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.game .levels{
+    flex: 20%;
+    margin-top: .625rem;;
+}
+
+.game .cancel{
+    width: fit-content;
+    margin: .625rem;
+    border: 2px solid var(--baseColor);
+    padding: .323rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--secondaryColor);
+    color: #f0efeb;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+}
+
+.game .cancel:hover{
+    color: var(--baseColor);
+    background-color: var(--hoverColor);
+}
+
+.game .quest{
+    flex: 60%;
+}
+
+.game .wildcards{
+    flex: 20%;
+}
+
+.levels{
+    margin-top: .323rem;
+}
+
+.level{
+    width: 100%;
+    margin: .625rem;
+    border: 2px solid var(--secondaryColor);
+    padding: .323rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--baseColor);
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.game .quest{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.game .quest > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.game .quest img {
+    width: 25rem;
+    height: auto;
+}
+
+.game .quest h2{
+    color:  var(--primaryColor);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.game .quest .question{
+    display: flex;
+    width: 100%;
+}
+
+.game .quest .question div:first-child{
+    width: 100%;
+    border: 2px solid var(--secondaryColor);
+    padding: .323rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--primaryColor);
+    color: var(--baseColor);
+    font-weight: bold;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.game .quest .question .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    background-color: var(--secondaryColor);
+    color: var(--baseColor);
+    padding: .323rem 1rem;
+    font-size: 1.75rem;
+    text-align: center;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.game .quest .options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .800rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.game .quest .options .option{
+    border: 2px solid var(--secondaryColor);
+    padding: .323rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    background-color: var(--baseColor);
+    color: var(--secondaryColor);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 1.25rem 0;
+    background-color: var(--baseColor);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.game .quest .options .option:hover{
+    color: var(--baseColor);
+    background-color: var(--hoverColor);
+}
+
+.game .quest .options .optionDisabled{ /* Estilos para cuando se contesta la pregunta */
+    border: 2px solid var(--secondaryColor);
+    padding: .323rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    background-color: var(--baseColor);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 1.25rem 0;
+}
+
+.game .wildcards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.game .wildcards .wildcard{
+    border: 3px solid var(--secondaryColor);
+    background-color: var(--baseColor);
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.75rem 1.25rem;
+    margin-top: 0.636rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.game .wildcards .wildcard:hover{
+    background-color: var(--hoverColor);
+}
+
+
+.game .wildcards #score{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.game .wildcards .score-icon{
+    font-size: 24px;
+}
+
+.game .wildcards .wild-icon{
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+
+.game .wildcards .wildcard:hover .wild-icon{
+    color: var(--baseColor);
+}
+
+footer{
+    background-color: var(--secondaryColor);
+    color: var(--baseColor);
+    padding-top: 6rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p{
+    margin-left: 0.643rem;
+}
+
+@media screen and (max-width: 420px) {
+
+    body{
+        overflow: auto;
+    }
+
+    .game .cancel{
+        font-size: 1.15rem;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .game .quest h2{
+        font-size: 1.25rem !important;
+    }
+
+    .game .levels .level,
+    .game .quest .question div:first-child,
+    .game .quest .question .time{
+        font-size: 1.15rem !important;
+    }
+    
+    .game .quest .options .option,
+    .game .quest .options .optionDisabled{ 
+        font-size: 1rem !important;
+    }
+
+    
+    footer{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+
+    body{
+        overflow: auto;
+    }
+    
+    .home img {
+        width: 100%;
+    }
+
+    .homeButton{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homeButton button:first-child {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .game{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .game .levels{
+        width: 100%;
+        flex: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .game .levels .hidden{
+        display: none;
+    }
+
+    .game .levels .level{
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0 2rem;
+    }
+
+    .game .cancel{
+        font-size: 1.15rem;
+        margin-top: 2.5rem;
+        position: sticky;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .game .quest img{
+        display: none;
+    }
+
+    .game .quest{
+        flex: 0;
+    }
+
+    .game .quest,
+    .game .quest > div{
+        margin: 0 1rem;
+    }
+
+    .game .quest .question div:first-child,
+    .game .quest .question .time,
+    .game .quest .options .option,
+    .game .quest .options .optionDisabled{ 
+        font-size: 1.25rem;
+    }
+
+    .game .quest .options{
+        grid-template-columns: 100%;
+    }
+
+    .game .wildcards{
+        flex-direction: column;
+        justify-content: center;
+        flex: 0;
+    }
+
+    .game .wildcards > div:first-child{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .game .wildcards #score{
+        margin-top: 1rem;
+        font-size: 1.75rem;
+    }
+
+    .game .wildcards .score-icon{
+        font-size: 30px;
+    }
+
+    footer{
+        position: static;
+    }
+
+    footer p{
+        text-align: center;
+    } 
+
+}
+
+@media screen and (max-width: 1500px) {
+    
+    .game .quest img{
+        width: 20rem;
+    }
+
+    .game .levels .level,
+    .game .quest .options .option,
+    .game .quest .options .optionDisabled
+    .game .quest .question > div:first-child{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+
+    header img{
+        width: 30rem;
+        height: auto;
+    }
+
+    .home img{
+        width: 50rem;
+    }
+
+    .home h2{
+        font-size: 3rem;
+    }
+
+    .game .quest img{
+        width: 40rem;
+    }
+
+    .homeButton button{
+        width: 40rem;
+        font-size: 3rem;
+        border: 4px solid var(--secondaryColor);
+    }
+
+    .game .quest .question > div:first-child,
+    .game .quest .options .option,
+    .game .quest .options .optionDisabled{
+        border: 4px solid var(--secondaryColor);
+    }
+
+    .game .levels .level,
+    .game .quest .options .option,
+    .game .quest .options .optionDisabled,
+    .game .quest .question > div:first-child,
+    .game .quest .question .time,
+    .game .wildcards #score{
+        font-size: 2.75rem;
+    }
+
+    .game .wildcards .wild-icon{
+        font-size: 64px;
+    }
+
+    .game .wildcards .score-icon{
+        font-size: 48px;
+    }
+
+    .swal2-title{
+        font-size: 3rem;
+    }
+
+    .swal2-html-container{
+        font-size: 2rem;
+    }
+
+    .swal2-container.swal2-center>.swal2-popup{
+        width: 50rem;
+    }
+    
+}
+
